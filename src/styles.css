@@ -36,33 +36,14 @@ img {
 body {
   background-color: rgb(29, 29, 29);
   height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 6rem 1fr 5rem;
-  grid-template-areas: 
-    "nav nav nav"
-    "content-wrapper content-wrapper content-wrapper"
-    "footer footer footer";
   font-family:  'Source Code Pro', Arial, Helvetica, sans-serif;
   color: white;
 }
 
-/* General CSS */
-.nav,
-.content-wrapper,
-.footer {
-  background-color: white;
-}
-
-/* .nav Section */
-.nav {
-  grid-area: nav;
-  background-color: var(--dark-grey);
-}
-
 /* .content-wrapper Section */
 .content-wrapper {
-  grid-area: content-wrapper;
+  height: 100vh;
+  background-color: white; 
   background-color: var(--black);
   display: flex;
 }
@@ -76,7 +57,25 @@ body {
 /* .sidebar Section */
 .sidebar {
   background-color: var(--light-grey);
-  flex-basis: 250px;
+  flex-basis: 15rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+.sidebar > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.project-nav-items {
+  margin-top: 10px;
+  padding-left: 15px;
+}
+
+/* .nav-items Section */
+.nav-items {
+  font-size: 1.5rem;
 }
 
 /* .content Section */
@@ -84,8 +83,10 @@ body {
   flex-grow: 1;
 }
 
-/* .footer Section */
+/* End Of Specific Sections */
+.nav,
 .footer {
-  grid-area: footer;
-  background-color: var(--dark-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
