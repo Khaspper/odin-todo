@@ -1,3 +1,6 @@
+/* CSS Fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
 /* CSS RESET BY DIGITAL OCEAN */
 html {
   box-sizing: border-box;
@@ -20,6 +23,16 @@ img {
 }
 /* CSS RESET BY DIGITAL OCEAN */
 
+/* CSS Variables */
+
+:root {
+  --dark-grey: rgb(54, 54, 54);
+  --black: rgb(29, 29, 29);
+  --light-grey: rgb(119, 119, 119);
+}
+
+/* CSS Variables */
+
 body {
   background-color: rgb(29, 29, 29);
   height: 100vh;
@@ -30,38 +43,49 @@ body {
     "nav nav nav"
     "content-wrapper content-wrapper content-wrapper"
     "footer footer footer";
+  font-family:  'Source Code Pro', Arial, Helvetica, sans-serif;
+  color: white;
 }
 
+/* General CSS */
 .nav,
 .content-wrapper,
 .footer {
   background-color: white;
 }
 
+/* .nav Section */
 .nav {
   grid-area: nav;
-  background-color: rgb(71, 71, 71);
+  background-color: var(--dark-grey);
 }
 
+/* .content-wrapper Section */
 .content-wrapper {
   grid-area: content-wrapper;
-  background-color: rgb(163, 41, 41);
+  background-color: var(--black);
   display: flex;
 }
 
-.footer {
-  grid-area: footer;
-  background-color: rgb(119, 83, 83);
-}
+/* .content-wrapper > */
 .sidebar,
 .content {
-  outline: auto black;
+  outline: auto white;
 }
 
+/* .sidebar Section */
 .sidebar {
+  background-color: var(--light-grey);
   flex-basis: 250px;
 }
 
+/* .content Section */
 .content {
   flex-grow: 1;
+}
+
+/* .footer Section */
+.footer {
+  grid-area: footer;
+  background-color: var(--dark-grey);
 }
