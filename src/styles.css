@@ -1,3 +1,67 @@
+/* CSS RESET BY DIGITAL OCEAN */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* CSS RESET BY DIGITAL OCEAN */
+
 body {
-  background-color: rgb(209, 23, 23);
+  background-color: rgb(29, 29, 29);
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 6rem 1fr 5rem;
+  grid-template-areas: 
+    "nav nav nav"
+    "content-wrapper content-wrapper content-wrapper"
+    "footer footer footer";
+}
+
+.nav,
+.content-wrapper,
+.footer {
+  background-color: white;
+}
+
+.nav {
+  grid-area: nav;
+  background-color: rgb(71, 71, 71);
+}
+
+.content-wrapper {
+  grid-area: content-wrapper;
+  background-color: rgb(163, 41, 41);
+  display: flex;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(119, 83, 83);
+}
+.sidebar,
+.content {
+  outline: auto black;
+}
+
+.sidebar {
+  flex-basis: 250px;
+}
+
+.content {
+  flex-grow: 1;
 }
