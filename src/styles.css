@@ -83,30 +83,26 @@ li {
 
 /* .content Section */
 .content {
-  flex-grow: 1;
+  width: 100vw;
   background-color: var(--dark-grey);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "display-card";
+  gap: 2rem;
 }
 
-.display-tasks {
-  height: 780px;
-  flex: 0 1 500px;
-  /* margin-top: 88px; */
-  border-radius: 15px 15px 0px 0px;
-  margin-left: 16px;
+/* .display-card Section */
+.display-card {
+  grid-area: display-card;
+  margin-top: 16vh;
+  margin-bottom: 4vh;
+  margin-left: 1rem;
   margin-right: 16px;
-  background-color: var(--darker-black);
+  min-width: 20.8rem;
+  max-width: 35.5rem;
+  background-color: var(--light-grey);
+  outline: auto black;
+  border-radius: 15px;
 }
 
-.add-task {
-  color: white;
-  cursor: pointer;
-  width: 568px;
-  height: 50px;
-  font-size: 2rem;
-  border-radius: 0px 0px 15px 15px;
-  border: None;
-  margin-left: 16px;
-  margin-right: 16px;
-  background-color: var(--black);
-}
+/* .display-tasks Section */
