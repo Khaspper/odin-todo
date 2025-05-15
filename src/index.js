@@ -1,4 +1,6 @@
 import './styles.css';
+import { tasks } from '../task';
 
-const addTaskItems = document.createElement(button);
+let taskItem = tasks();
 
+console.log(taskItem.checkBox)
