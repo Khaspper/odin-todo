@@ -101,8 +101,33 @@ li {
   min-width: 20.8rem;
   max-width: 35.5rem;
   background-color: var(--light-grey);
-  outline: auto black;
-  border-radius: 15px;
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 3px 3px 15px black;
 }
 
 /* .display-tasks Section */
+.display-tasks {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--black);
+  border-radius: 1rem 1rem 0 0;
+}
+
+/* .seperation-box Section */
+.seperation-box {
+  height: 1rem;
+  background-color: var(--dark-grey);
+}
+
+/* .add-tasks Section */
+.add-tasks {
+  border: none;
+  padding: .625rem;
+  border-radius: 0 0 1rem 1rem;
+  cursor: pointer;
+}
