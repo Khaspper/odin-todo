@@ -48,14 +48,10 @@ body {
 }
 
 /* .content-wrapper > */
-.sidebar,
-.content {
-  outline: auto white;
-}
 
 /* .sidebar Section */
 .sidebar {
-  background-color: var(--black);
+  background-color: var(--darker-black);
   flex-shrink: 0;
   flex-basis: 15rem;
   padding-top: 1rem;
@@ -99,9 +95,9 @@ li {
   margin-left: 1rem;
   margin-right: 16px;
   min-width: 20.8rem;
-  max-width: 35.5rem;
+  max-width: 34rem;
   background-color: var(--light-grey);
-  border-radius: 1rem;
+  border-radius: .6rem;
 
   display: flex;
   flex-direction: column;
@@ -115,7 +111,7 @@ li {
   display: flex;
   flex-direction: column;
   background-color: var(--black);
-  border-radius: 1rem 1rem 0 0;
+  border-radius: .6rem .6rem 0 0;
 }
 
 /* .seperation-box Section */
@@ -128,6 +124,6 @@ li {
 .add-tasks {
   border: none;
   padding: .625rem;
-  border-radius: 0 0 1rem 1rem;
+  border-radius: 0 0 .6rem .6rem;
   cursor: pointer;
 }
