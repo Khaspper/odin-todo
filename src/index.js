@@ -1,6 +1,4 @@
 import './styles.css';
-import { tasks } from '../task';
+import { project } from './task';
 
-let taskItem = tasks();
-
-console.log(taskItem.checkBox)
+console.log(taskItem.checkbox);
