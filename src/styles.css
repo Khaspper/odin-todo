@@ -90,7 +90,7 @@ li {
 /* .display-card Section */
 .display-card {
   grid-area: display-card;
-  margin-top: 16vh;
+  margin-top: 14vh;
   margin-bottom: 4vh;
   margin-left: 1rem;
   margin-right: 16px;
