@@ -56,5 +56,8 @@ export function project() {
     }
     console.log('Done!');
   };
-  return { addTask, printList }
+  function getTodoList() {
+    return todoList;
+  }
+  return { addTask, printList, getTodoList }
 };
