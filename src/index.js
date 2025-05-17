@@ -1,20 +1,29 @@
 import './styles.css';
 import { makeProject } from './buildProjects';
 import { projectList } from './projectList';
+import { renderTasks } from './renderTasks';
 
 const addTaskButton = document.querySelector('.add-tasks');
-const homeProject = makeProject('Home');
+const sideBar = document.querySelector('.sidebar');
+
+const homeProject = makeProject('Home Testing');
 const todayProject = makeProject('Today');
 const weekProject = makeProject('Week');
 projectList.addToProjectList(homeProject);
 projectList.addToProjectList(todayProject);
 projectList.addToProjectList(weekProject);
-projectList.printProjectList();
 
 let currentProject = homeProject;
 
-addTaskButton.addEventListener('click', (event) => {
-  console.log(console.log(currentProject.printTodoList()));
+sideBar.addEventListener('click', (event) => {
+  if (event.target.textContent in projectList.getProjectList()) {
+    currentProject = projectList.getProject(event.target.textContent);
+    renderTasks(currentProject.getTodoList());
+  }
+});
+
+addTaskButton.addEventListener('click', () => {
+  console.log(console.log(renderTasks(currentProject.getTodoList())));
 });
 
 homeProject.addTask('Adding Home Task Test 1');
@@ -24,3 +33,9 @@ todayProject.addTask('Adding Today Task Test 1');
 
 weekProject.addTask('Adding week Task Test 1');
 
+
+//! Dude I'm so sorry I'm so sleepy I don't even know what I'm thinking 
+//! here but all I know is that you need to make the Add task button work!
+//! Good job dude we had to restart but what ever this code is more organized
+//! and a lot better
+//! 
