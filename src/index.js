@@ -2,7 +2,7 @@ import './styles.css';
 import { makeProject } from './buildProjects';
 import { projectList } from './projectList';
 import { renderTasks } from './renderTasks';
-import { addTaskToProject, buildTask } from './task';
+import { buildTask } from './task';
 
 const addTaskButton = document.querySelector('.add-tasks');
 const sideBar = document.querySelector('.sidebar');
@@ -32,6 +32,5 @@ sideBar.addEventListener('click', (event) => {
 
 //? Use later
 addTaskButton.addEventListener('click', () => {
-  const task = buildTask();
-  // addTaskToProject(currentProject, task);
+  buildTask(currentProject);
 });

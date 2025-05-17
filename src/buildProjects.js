@@ -54,7 +54,7 @@ export function printTodoList(project) {
 };
 
 // * This is being used in addTaskButton.js
-export function addTask(project, title, dueDate, notes) {
+export function addTask(project, { title, dueDate='00/00/0000', notes='' }) {
   project.todoList.push ({
     title,
     dueDate,

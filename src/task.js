@@ -1,19 +1,22 @@
 import { addTask } from "./buildProjects";
 
-//* Second argument is object destructuring
-export function addTaskToProject(project, { title, dueDate='00/00/0000', notes='Temp' }) {
-  console.log(`Adding task to project`);
-  addTask(project, title, dueDate, notes);
-  console.log(project);
-}
-
-export function buildTask() {
-  const dialog = document.querySelector('dialog');
-
-  const cancelButton = document
-        .querySelector('.cancel-form')
+const dialog = document.querySelector('dialog');
+const form = document.querySelector('form');
+document.querySelector('.cancel-form')
         .addEventListener('click', () => dialog.close());
 
+//* Second argument is object destructuring
+export function buildTask(project) {
   dialog.showModal();
-  return 0;
+  let task = {};  
+  form.onsubmit = (event) => {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    task.title = data.get('task_name');
+    task.dueDate = data.get('due_date');
+    task.notes = data.get('notes');
+    addTask(project, task);
+    form.reset();
+    dialog.close();
+  };
 }
