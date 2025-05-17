@@ -1,29 +1,63 @@
-export function makeProject(name) {
-  const projectName = name;
-  const todoList = [];
+//! Legacy code might need later?
 
-  function getProjectName() {
-    return projectName;
-  }
+// export function makeProject(name) {
+//   const projectName = name;
+//   const todoList = [];
 
-  function printTodoList() {
-    for (const tasks of todoList) {
-      console.log(tasks);
-    }
-    console.log('Done!');
-  }
+//   function getProjectName() {
+//     return projectName;
+//   }
+
+//   function printTodoList() {
+//     for (const tasks of todoList) {
+//       console.log(tasks);
+//     }
+//     console.log('Done!');
+//   }
   
-  function addTask(title, dueDate='00/00/0000', notes='Temp') {
-    todoList.push ({
-      title,
-      dueDate,
-      notes,
-    });
-  }
+//   function addTask(title, dueDate='00/00/0000', notes='Temp') {
+//     todoList.push ({
+//       title,
+//       dueDate,
+//       notes,
+//     });
+//   }
 
-  function getTodoList() {
-    return todoList;
-  }
+//   function getTodoList() {
+//     return todoList;
+//   }
 
-  return { printTodoList, getProjectName, addTask, getTodoList }
+//   return { printTodoList, getProjectName, addTask, getTodoList }
+// }
+
+//! Legacy code might need later?
+
+export function makeProject(name) {
+  return {
+    projectName: name,
+    todoList: []
+  }
+};
+
+export function getProjectName(project) {
+  return project.projectName;
+};
+
+export function printTodoList(project) {
+  for (const tasks of project.todoList) {
+    console.log(tasks);
+  }
+  console.log('Done!');
+};
+
+export function addTask(project, title, dueDate='00/00/0000', notes='Temp') {
+  project.todoList.push ({
+    title,
+    dueDate,
+    notes,
+  });
+};
+
+export function getTodoList(project) {
+  return project.todoList;
 }
