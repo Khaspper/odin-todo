@@ -27,5 +27,3 @@ export function makeProject(name) {
 
   return { printTodoList, getProjectName, addTask, getTodoList }
 }
-
-//? I'm pretty sure this is fine
