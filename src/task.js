@@ -7,6 +7,13 @@ export function addTaskToProject(project, { title, dueDate='00/00/0000', notes='
   console.log(project);
 }
 
-export function buildTask () {
-  
+export function buildTask() {
+  const dialog = document.querySelector('dialog');
+
+  const cancelButton = document
+        .querySelector('.cancel-form')
+        .addEventListener('click', () => dialog.close());
+
+  dialog.showModal();
+  return 0;
 }

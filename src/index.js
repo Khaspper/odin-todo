@@ -33,5 +33,5 @@ sideBar.addEventListener('click', (event) => {
 //? Use later
 addTaskButton.addEventListener('click', () => {
   const task = buildTask();
-  addTaskToProject(currentProject, task);
+  // addTaskToProject(currentProject, task);
 });

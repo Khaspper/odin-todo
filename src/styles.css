@@ -167,3 +167,30 @@ li {
   padding: 0;
   cursor: pointer;
 }
+
+/* <dialog> Section */
+dialog {
+  background-color: var(--light-grey);
+  color: white;
+  border-color: black;
+
+  /* Centering a dialog section */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0px;
+  padding: 2rem;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(1px);
+}
+
+.form-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
