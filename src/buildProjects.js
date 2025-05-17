@@ -32,6 +32,7 @@
 
 //! Legacy code might need later?
 
+// * This is being used in index.js
 export function makeProject(name) {
   return {
     projectName: name,
@@ -39,10 +40,12 @@ export function makeProject(name) {
   }
 };
 
+// * This is being used in projectList.js
 export function getProjectName(project) {
   return project.projectName;
 };
 
+// Debugging
 export function printTodoList(project) {
   for (const tasks of project.todoList) {
     console.log(tasks);
@@ -50,7 +53,8 @@ export function printTodoList(project) {
   console.log('Done!');
 };
 
-export function addTask(project, title, dueDate='00/00/0000', notes='Temp') {
+// * This is being used in addTaskButton.js
+export function addTask(project, title, dueDate, notes) {
   project.todoList.push ({
     title,
     dueDate,
