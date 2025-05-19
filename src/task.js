@@ -1,4 +1,5 @@
-import { addTask } from "./buildProjects";
+import { addTask, getTodoList } from "./buildProjects";
+import { addTaskToDisplayCard, renderTasks } from "./renderTasks";
 
 const dialog = document.querySelector('dialog');
 const form = document.querySelector('form');
@@ -18,5 +19,6 @@ export function buildTask(project) {
     addTask(project, task);
     form.reset();
     dialog.close();
+    addTaskToDisplayCard(task);
   };
 }

@@ -59,6 +59,8 @@ export function addTask(project, { title, dueDate='00/00/0000', notes='' }) {
     title,
     dueDate,
     notes,
+    completed: false,
+    uniqueID: crypto.randomUUID(),
   });
 };
 
