@@ -1,3 +1,5 @@
+import './taskStyles.css'
+
 const displayTasksCard = document.querySelector('.display-tasks');
 
 function clearTaskDisplay() {
@@ -24,11 +26,10 @@ function createTaskElement(task) {
 export function renderTasks(todoList) {
   clearTaskDisplay();
   todoList.forEach(task => {
-    displayTasksCard.appendChild(createTaskElement(task));
+    addTaskToDisplayCard(task)
   });
 }
 
 export function addTaskToDisplayCard(task) {
-  console.log(`Hi:`);
-  console.log(task)
+  displayTasksCard.appendChild(createTaskElement(task));
 }

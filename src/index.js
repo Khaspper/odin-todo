@@ -19,7 +19,16 @@ const task = {
   duDate: '00/00/0000',
   notes: 'Also Remember to Delete this later',
 }
+
+const task2 = {
+  title: '2 Delete this later',
+  duDate: '01/01/0001',
+  notes: '2 Also Remember to Delete this later',
+}
+
+
 addTask(homeProject, task);
+addTask(homeProject, task2);
 //! Delete this
 
 renderTasks(getTodoList(currentProject));
