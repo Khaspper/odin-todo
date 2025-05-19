@@ -58,4 +58,13 @@ input[type="checkbox"]:checked::before {
   transform: scale(1);
 }
 
+input[type="checkbox"]:checked + .task-title {
+  color: grey;
+  transition: 120ms transform ease-in-out;
+  text-decoration: line-through;
+}
+
+input[type="checkbox"]:checked {
+  color: grey;
+}
 /*! End of moderncss code  */

@@ -54,3 +54,6 @@ sideBar.addEventListener('click', (event) => {
 addTaskButton.addEventListener('click', () => {
   buildTask(currentProject);
 });
+
+// Todo: Use JS to check if the checkbox is checked if it is checked set completed to true else set it to false
+// TODO: After that make the task grey (like the text color) maybe implement a strike through style?
