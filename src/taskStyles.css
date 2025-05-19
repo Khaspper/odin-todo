@@ -15,3 +15,5 @@
 .task-wrapper:hover {
   background: rgba(255, 255, 255, 0.05); /* optional visual hover effect */
 }
+
+/* TODO: Style the checkbox use apperance: none and -webkit-apperance: none */
