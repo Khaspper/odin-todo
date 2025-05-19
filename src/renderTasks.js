@@ -21,8 +21,6 @@ function createTaskElement(task) {
   return taskWrapper;
 }
 
-//TODO: This should not console.log() the tasks but instead 
-//TODO: put it in the display-tasks-card and make it HTML
 export function renderTasks(todoList) {
   clearTaskDisplay();
   todoList.forEach(task => {
