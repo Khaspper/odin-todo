@@ -1,6 +1,6 @@
 import './taskStyles.css'
 
-const displayTasksCard = document.querySelector('.display-tasks');
+export const displayTasksCard = document.querySelector('.display-tasks');
 
 function clearTaskDisplay() {
   displayTasksCard.innerHTML = '';
@@ -17,6 +17,7 @@ function createTaskElement(task) {
   taskTitle.textContent = task.title;
   
   taskWrapper.classList.add('task-wrapper');
+  taskWrapper.id = task.uniqueID;
   taskWrapper.appendChild(taskCheckbox);
   taskWrapper.appendChild(taskTitle);
 

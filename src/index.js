@@ -1,8 +1,8 @@
 import './styles.css';
 import { addTask, getTodoList, makeProject } from './buildProjects';
 import { projectList } from './projectList';
-import { renderTasks } from './renderTasks';
-import { buildTask } from './task';
+import { displayTasksCard, renderTasks } from './renderTasks';
+import { buildTask, changeCompleted } from './task';
 
 const addTaskButton = document.querySelector('.add-tasks');
 const sideBar = document.querySelector('.sidebar');
@@ -57,3 +57,13 @@ addTaskButton.addEventListener('click', () => {
 
 // Todo: Use JS to check if the checkbox is checked if it is checked set completed to true else set it to false
 // TODO: After that make the task grey (like the text color) maybe implement a strike through style?
+
+displayTasksCard.addEventListener('click', (event) => {
+  if(event.target.type === 'checkbox') {
+    // TODO: Change the tasks 'completed' property to the opposite it is now
+    console.log("TODO: Change the tasks 'completed' property to the opposite it is now");
+    const taskID = event.target.parentNode.id;
+    // console.log(currentProject);
+    changeCompleted(getTodoList(currentProject), taskID);
+  }
+});

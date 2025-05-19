@@ -22,3 +22,14 @@ export function buildTask(project) {
     addTaskToDisplayCard(task);
   };
 }
+
+function getTask(todoList, taskID) {
+  const found = todoList.find((element) => element.uniqueID === taskID);
+  return found;
+}
+
+export function changeCompleted(todoList, taskID) {
+  const task = getTask(todoList, taskID)
+  task.completed = !task.completed;
+  console.log(task);
+}
