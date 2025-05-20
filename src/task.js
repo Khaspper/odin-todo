@@ -8,6 +8,9 @@ const taskInfoDialog = document.querySelector('.task-info');
 document.querySelector('.cancel-form-task')
         .addEventListener('click', () => dialog.close());
 
+document.querySelector('.close-task-info')
+        .addEventListener('click', () => taskInfoDialog.close());
+
 
 //* Second argument is object destructuring
 export function buildTask(project) {
@@ -45,7 +48,17 @@ export function deleteTask(project, taskID) {
   }
 }
 
-export function showTaskInfo(project, taskID) {
-  console.log(project);
-  console.log(taskID);
+export function showTaskInfo(todoList, taskID) {
+  const task = todoList.find(item => item.uniqueID === taskID)
+  
+  document.querySelector('.task-name-modal')
+          .textContent = task.title;
+  
+  document.querySelector('.task-duedate-modal')
+          .textContent = task.dueDate;
+
+  document.querySelector('.task-notes-modal')
+          .textContent = task.notes;
+          
+  taskInfoDialog.showModal();
 }

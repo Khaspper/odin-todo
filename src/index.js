@@ -90,9 +90,9 @@ displayTasksCard.addEventListener('click', (event) => {
     deleteTask(currentProject, event.target.parentNode.parentNode.id)
   }
   else if(event.target.classList.contains('task-wrapper')) {
-    showTaskInfo(currentProject, event.target.id);
+    showTaskInfo(getTodoList(currentProject), event.target.id);
   }
   else if(event.target.classList.contains('task-title')) {
-    showTaskInfo(currentProject, event.target.parentNode.id);
+    showTaskInfo(getTodoList(currentProject), event.target.parentNode.id);
   }
 });
