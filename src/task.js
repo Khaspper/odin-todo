@@ -3,8 +3,11 @@ import { renderTasks } from "./renderTasks";
 
 const dialog = document.querySelector('.create-task');
 const form = document.querySelector('.task-form');
+const taskInfoDialog = document.querySelector('.task-info');
+
 document.querySelector('.cancel-form-task')
         .addEventListener('click', () => dialog.close());
+
 
 //* Second argument is object destructuring
 export function buildTask(project) {
@@ -40,4 +43,9 @@ export function deleteTask(project, taskID) {
       renderTasks(todoList);
     }
   }
+}
+
+export function showTaskInfo(project, taskID) {
+  console.log(project);
+  console.log(taskID);
 }

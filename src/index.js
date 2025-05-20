@@ -2,7 +2,7 @@ import './styles.css';
 import { addTask, buildProject, deleteProject, getTodoList } from './buildProjects';
 import { projectList } from './projectList';
 import { displayTasksCard, renderTasks } from './renderTasks';
-import { buildTask, changeCompleted, deleteTask } from './task';
+import { buildTask, changeCompleted, deleteTask, showTaskInfo } from './task';
 
 const addTaskButton = document.querySelector('.add-tasks');
 const sideBar = document.querySelector('.sidebar');
@@ -63,6 +63,8 @@ sideBar.addEventListener('click', (event) => {
   }
   else if (event.target.parentNode.parentNode.classList.contains('project-nav-items')) {
     deleteProject(event.target.parentNode.parentNode.id);
+    currentProject = homeProject;
+    renderTasks(getTodoList(currentProject));
   }
   //! Delete this later
   else if (event.target.textContent === 'yo') {
@@ -86,5 +88,11 @@ displayTasksCard.addEventListener('click', (event) => {
   }
   else if (event.target.parentNode.classList.contains('trash-icon')) {
     deleteTask(currentProject, event.target.parentNode.parentNode.id)
+  }
+  else if(event.target.classList.contains('task-wrapper')) {
+    showTaskInfo(currentProject, event.target.id);
+  }
+  else if(event.target.classList.contains('task-title')) {
+    showTaskInfo(currentProject, event.target.parentNode.id);
   }
 });
