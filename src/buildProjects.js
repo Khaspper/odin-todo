@@ -1,5 +1,7 @@
 //! Legacy code might need later?
 
+import { addTaskToDisplayCard } from "./renderTasks";
+
 // export function makeProject(name) {
 //   const projectName = name;
 //   const todoList = [];
@@ -55,13 +57,15 @@ export function printTodoList(project) {
 
 // * This is being used in addTaskButton.js
 export function addTask(project, { title, dueDate='00/00/0000', notes='' }) {
-  project.todoList.push ({
+  const task = {
     title,
     dueDate,
     notes,
     completed: false,
     uniqueID: crypto.randomUUID(),
-  });
+  }
+  project.todoList.push(task);
+  addTaskToDisplayCard(task);
 };
 
 export function getTodoList(project) {

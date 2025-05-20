@@ -1,7 +1,7 @@
 import { addTask, getTodoList } from "./buildProjects";
-import { addTaskToDisplayCard, renderTasks } from "./renderTasks";
+import { renderTasks } from "./renderTasks";
 
-const dialog = document.querySelector('dialog');
+const dialog = document.querySelector('.create-task');
 const form = document.querySelector('form');
 document.querySelector('.cancel-form')
         .addEventListener('click', () => dialog.close());
@@ -19,7 +19,6 @@ export function buildTask(project) {
     addTask(project, task);
     form.reset();
     dialog.close();
-    addTaskToDisplayCard(task);
   };
 }
 

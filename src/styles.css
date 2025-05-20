@@ -63,6 +63,10 @@ body {
   gap: 15px;
 }
 
+.sidebar > * {
+  cursor: pointer;
+}
+
 li {
   padding-left: 15px;
 }

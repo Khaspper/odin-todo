@@ -67,6 +67,7 @@ displayTasksCard.addEventListener('click', (event) => {
     changeCompleted(getTodoList(currentProject), taskID);
   }
   else if (event.target.parentNode.classList.contains('trash-icon')) {
+    console.log(event.target.parentNode.parentNode);
     deleteTask(currentProject, event.target.parentNode.parentNode.id)
   }
 });
