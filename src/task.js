@@ -31,5 +31,19 @@ function getTask(todoList, taskID) {
 export function changeCompleted(todoList, taskID) {
   const task = getTask(todoList, taskID)
   task.completed = !task.completed;
-  console.log(task);
+}
+
+export function deleteTask(project, taskID) {
+  const todoList = getTodoList(project);
+  for (const index in todoList) {
+    if (todoList[index].uniqueID === taskID) {
+      console.log(`Delete this one: ${todoList[index]}`);
+      console.log('Before deletion');
+      console.log(todoList)
+      todoList.splice(index, 1);
+      console.log('After deletion')
+      console.log(todoList)
+      renderTasks(todoList);
+    }
+  }
 }

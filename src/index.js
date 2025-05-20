@@ -2,7 +2,7 @@ import './styles.css';
 import { addTask, getTodoList, makeProject } from './buildProjects';
 import { projectList } from './projectList';
 import { displayTasksCard, renderTasks } from './renderTasks';
-import { buildTask, changeCompleted } from './task';
+import { buildTask, changeCompleted, deleteTask } from './task';
 
 const addTaskButton = document.querySelector('.add-tasks');
 const sideBar = document.querySelector('.sidebar');
@@ -65,5 +65,8 @@ displayTasksCard.addEventListener('click', (event) => {
     const taskID = event.target.parentNode.id;
     // console.log(currentProject);
     changeCompleted(getTodoList(currentProject), taskID);
+  }
+  else if (event.target.parentNode.classList.contains('trash-icon')) {
+    deleteTask(currentProject, event.target.parentNode.parentNode.id)
   }
 });

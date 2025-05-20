@@ -41,8 +41,6 @@ function createTaskElement(task) {
   taskWrapper.appendChild(taskTitle);
   taskWrapper.appendChild(trashIcon);
 
-  console.log(taskWrapper)
-
   return taskWrapper;
 }
 
