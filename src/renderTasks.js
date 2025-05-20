@@ -6,7 +6,7 @@ function clearTaskDisplay() {
   displayTasksCard.innerHTML = '';
 }
 
-function createTrashIconSVG() {
+export function createTrashIconSVG() {
   const svgNS = "http://www.w3.org/2000/svg";
 
   const svg = document.createElementNS(svgNS, 'svg');

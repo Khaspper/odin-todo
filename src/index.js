@@ -1,5 +1,5 @@
 import './styles.css';
-import { addTask, buildProject, getTodoList } from './buildProjects';
+import { addTask, buildProject, deleteProject, getTodoList } from './buildProjects';
 import { projectList } from './projectList';
 import { displayTasksCard, renderTasks } from './renderTasks';
 import { buildTask, changeCompleted, deleteTask } from './task';
@@ -55,11 +55,14 @@ sideBar.addEventListener('click', (event) => {
   // console.log(event.target.textContent);
   if (event.target.textContent in projectList.getProjectList()) {
     currentProject = projectList.getProject(event.target.textContent);
-    // console.log(currentProject);
+    console.log(currentProject);
     renderTasks(getTodoList(currentProject));
   }
   else if (event.target.classList.contains('project-section')) {
     buildProject();
+  }
+  else if (event.target.parentNode.parentNode.classList.contains('project-nav-items')) {
+    deleteProject(event.target.parentNode.parentNode.id);
   }
   //! Delete this later
   else if (event.target.textContent === 'yo') {
@@ -77,13 +80,11 @@ addTaskButton.addEventListener('click', () => {
 displayTasksCard.addEventListener('click', (event) => {
   if(event.target.type === 'checkbox') {
     // TODO: Change the tasks 'completed' property to the opposite it is now
-    console.log("TODO: Change the tasks 'completed' property to the opposite it is now");
     const taskID = event.target.parentNode.id;
     // console.log(currentProject);
     changeCompleted(getTodoList(currentProject), taskID);
   }
   else if (event.target.parentNode.classList.contains('trash-icon')) {
-    console.log(event.target.parentNode.parentNode);
     deleteTask(currentProject, event.target.parentNode.parentNode.id)
   }
 });

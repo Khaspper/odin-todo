@@ -1,5 +1,6 @@
 import { addTaskToDisplayCard } from "./renderTasks";
 import { projectList } from "./projectList";
+import { createTrashIconSVG } from "./renderTasks";
 
 const dialog = document.querySelector('.create-project');
 const form = document.querySelector('.project-form');
@@ -29,9 +30,12 @@ export function buildProject() {
 function addProjectToDOM(project) {
   const projectSection = document.querySelector('.project-list');
   const projectName = document.createElement('li');
+  const trashIcon = createTrashIconSVG();
   
   projectName.textContent = project.projectName;
   projectName.classList.add('project-nav-items')
+  projectName.id = project.uniqueID;
+  projectName.appendChild(trashIcon);
   
   projectSection.appendChild(projectName);
 }
@@ -64,4 +68,16 @@ export function addTask(project, { title, dueDate='00/00/0000', notes='' }) {
 
 export function getTodoList(project) {
   return project.todoList;
+}
+
+export function deleteProject(projectID) {
+  const projectArr = projectList.getProjectList();
+  document.getElementById(projectID)
+          .remove();
+  console.log(projectArr);
+  for (const index in projectArr) {
+    if (projectArr[index].uniqueID === projectID) {
+      delete projectArr[index];
+    }
+  }
 }
