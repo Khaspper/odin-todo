@@ -9,11 +9,11 @@
   <div class="content-wrapper">
     <div class="sidebar">
       <ul>
-        <li class="nav-items home">Home Testing</li>
+        <li class="nav-items home">Home</li>
         <li class="nav-items today">Today</li>
         <li class="nav-items week">Week</li>
-        <li class="nav-items">Projects
-          <ul>
+        <li class="nav-items project-section">Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+          <ul class="project-list">
             <li class="project-nav-items">yo</li>
           </ul>
         </li>
@@ -27,9 +27,8 @@
       </div>
     </div>
 
-    <!-- <dialog open> -->
     <dialog class="create-task">
-      <form>
+      <form class="task-form">
         <div class="form-wrapper">
           <label for="task_name">Task Name:</label>
           <input type="text" name="task_name" id="task_name">
@@ -40,7 +39,18 @@
           <label for="notes">Notes</label>
           <textarea name="notes" id="notes" rows=4 cols=20></textarea>
         </div>
-        <button type="button" class="cancel-form">Cancel</button>
+        <button type="button" class="cancel-form-task">Cancel</button>
+        <button type="submit" class="submit-form">Add</button>
+      </form>
+    </dialog>
+
+    <dialog class="create-project">
+      <form class="project-form">
+        <div class="form-wrapper">
+          <label for="project_name">Project Name:</label>
+          <input type="text" name="project_name" id="project_name">
+        </div>
+        <button type="button" class="cancel-form-project">Cancel</button>
         <button type="submit" class="submit-form">Add</button>
       </form>
     </dialog>

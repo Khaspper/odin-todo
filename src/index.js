@@ -1,5 +1,5 @@
 import './styles.css';
-import { addTask, getTodoList, makeProject } from './buildProjects';
+import { addTask, buildProject, getTodoList } from './buildProjects';
 import { projectList } from './projectList';
 import { displayTasksCard, renderTasks } from './renderTasks';
 import { buildTask, changeCompleted, deleteTask } from './task';
@@ -7,9 +7,21 @@ import { buildTask, changeCompleted, deleteTask } from './task';
 const addTaskButton = document.querySelector('.add-tasks');
 const sideBar = document.querySelector('.sidebar');
 
-const homeProject = makeProject('Home Testing');
-const todayProject = makeProject('Today');
-const weekProject = makeProject('Week');
+const homeProject = {
+  projectName: 'Home',
+  todoList: [],
+  uniqueID: crypto.randomUUID(),
+};
+const todayProject = {
+  projectName: 'Today',
+  todoList: [],
+  uniqueID: crypto.randomUUID(),
+};
+const weekProject = {
+  projectName: 'Week',
+  todoList: [],
+  uniqueID: crypto.randomUUID(),
+};
 
 let currentProject = homeProject;
 
@@ -46,6 +58,10 @@ sideBar.addEventListener('click', (event) => {
     // console.log(currentProject);
     renderTasks(getTodoList(currentProject));
   }
+  else if (event.target.classList.contains('project-section')) {
+    buildProject();
+  }
+  //! Delete this later
   else if (event.target.textContent === 'yo') {
     console.log(projectList.getProjectList());
   }
