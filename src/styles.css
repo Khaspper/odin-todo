@@ -199,3 +199,10 @@ dialog::backdrop {
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
+
+.task-notes-modal {
+  outline: auto black;
+  padding: 1rem;
+  /* width: 100%; */
+  overflow-wrap: break-word;
+}
