@@ -1,69 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <div class="content-wrapper">
-    <div class="sidebar">
-      <ul>
-        <li class="nav-items home">Home</li>
-        <li class="nav-items today">Today</li>
-        <li class="nav-items week">Week</li>
-        <li class="nav-items project-section">Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
-          <ul class="project-list">
-            <li class="project-nav-items">yo</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <div class="content">
-      <div class="display-card">
-        <div class="display-tasks"></div>
-        <div class="seperation-box"></div>
-        <button class="add-tasks" type="button">Add Task</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="content-wrapper">
+      <div class="sidebar">
+        <ul>
+          <li class="nav-items home">Home</li>
+          <li class="nav-items today">Today</li>
+          <li class="nav-items week">Week</li>
+          <li class="nav-items project-section">
+            Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+            <ul class="project-list">
+              <li class="project-nav-items">yo</li>
+            </ul>
+          </li>
+        </ul>
       </div>
-    </div>
-
-    <dialog class="create-task">
-      <form class="task-form">
-        <div class="form-wrapper">
-          <label for="task_name">Task Name:</label>
-          <input type="text" name="task_name" id="task_name">
-
-          <label for="due_date">Due Date</label>
-          <input type="date" name="due_date" id="due_date">
-
-          <label for="notes">Notes</label>
-          <textarea name="notes" id="notes" rows=4 cols=20></textarea>
+      <div class="content">
+        <div class="display-card">
+          <div class="display-tasks"></div>
+          <div class="seperation-box"></div>
+          <button class="add-tasks" type="button">Add Task</button>
         </div>
-        <button type="button" class="cancel-form-task">Cancel</button>
-        <button type="submit" class="submit-form">Add</button>
-      </form>
-    </dialog>
-
-    <dialog class="create-project">
-      <form class="project-form">
-        <div class="form-wrapper">
-          <label for="project_name">Project Name:</label>
-          <input type="text" name="project_name" id="project_name">
-        </div>
-        <button type="button" class="cancel-form-project">Cancel</button>
-        <button type="submit" class="submit-form">Add</button>
-      </form>
-    </dialog>
-
-    <!-- Task info -->
-    <dialog class="task-info">
-      <div class="task-info-wrapper">
-        <p class="task-name-modal"></p>
-        <p class="task-duedate-modal"></p>
-        <p class="task-notes-modal"></p>
       </div>
-      <button type="button" class="close-task-info">Close</button>
-    </dialog>
-  </div>
-</body>
+
+      <dialog class="create-task">
+        <form class="task-form">
+          <div class="form-wrapper">
+            <label for="task_name">Task Name:</label>
+            <input type="text" name="task_name" id="task_name" />
+
+            <label for="due_date">Due Date</label>
+            <input type="date" name="due_date" id="due_date" />
+
+            <label for="notes">Notes</label>
+            <textarea name="notes" id="notes" rows="4" cols="20"></textarea>
+          </div>
+          <button type="button" class="cancel-form-task">Cancel</button>
+          <button type="submit" class="submit-form">Add</button>
+        </form>
+      </dialog>
+
+      <dialog class="create-project">
+        <form class="project-form">
+          <div class="form-wrapper">
+            <label for="project_name">Project Name:</label>
+            <input type="text" name="project_name" id="project_name" />
+          </div>
+          <button type="button" class="cancel-form-project">Cancel</button>
+          <button type="submit" class="submit-form">Add</button>
+        </form>
+      </dialog>
+
+      <!-- Task info -->
+      <dialog class="task-info">
+        <div class="task-info-wrapper">
+          <p class="task-name-modal"></p>
+          <p class="task-duedate-modal"></p>
+          <p class="task-notes-modal"></p>
+        </div>
+        <button type="button" class="close-task-info">Close</button>
+      </dialog>
+    </div>
+  </body>
 </html>

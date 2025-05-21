@@ -1,5 +1,5 @@
 /* CSS Fonts from Google */
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 
 /* CSS RESET BY DIGITAL OCEAN */
 html {
@@ -7,13 +7,23 @@ html {
   font-size: 16px;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -37,7 +47,7 @@ img {
 body {
   background-color: rgb(29, 29, 29);
   height: 100vh;
-  font-family:  'Source Code Pro', Arial, Helvetica, sans-serif;
+  font-family: "Source Code Pro", Arial, Helvetica, sans-serif;
   color: white;
 }
 
@@ -102,7 +112,7 @@ li {
   min-width: 20.8rem;
   max-width: 34rem;
   background-color: var(--light-grey);
-  border-radius: .6rem;
+  border-radius: 0.6rem;
 
   display: flex;
   flex-direction: column;
@@ -116,10 +126,10 @@ li {
   display: flex;
   flex-direction: column;
   background-color: var(--black);
-  border-radius: .6rem .6rem 0 0;
+  border-radius: 0.6rem 0.6rem 0 0;
 
   overflow-y: scroll;
-  scrollbar-color: white var(--black) ;
+  scrollbar-color: white var(--black);
 }
 
 /* .seperation-box Section */
@@ -131,8 +141,8 @@ li {
 /* .add-tasks Section */
 .add-tasks {
   border: none;
-  padding: .625rem;
-  border-radius: 0 0 .6rem .6rem;
+  padding: 0.625rem;
+  border-radius: 0 0 0.6rem 0.6rem;
   cursor: pointer;
 }
 
@@ -144,7 +154,8 @@ li {
 }
 
 .task-checkbox-input:checked {
-  background: url(data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==) no-repeat center center;
+  background: url(data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==)
+    no-repeat center center;
   background-size: 9px 9px;
 }
 
